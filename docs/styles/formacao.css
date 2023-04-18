@@ -153,9 +153,16 @@
   }
   .formacao-texto {
     font-size: 1.2rem;
+    max-width: 800px;
   }
   .idiomas h3::before {
     position: initial;
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .faculdade-lista .faculdade:last-child {
+    max-width: 95px;
   }
 }

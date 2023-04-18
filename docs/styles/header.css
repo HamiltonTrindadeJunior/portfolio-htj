@@ -105,7 +105,7 @@
   padding: 5px 10px;
   display: block;
   font-variant: small-caps;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .lang-menu ul li:hover {
@@ -157,22 +157,70 @@
   padding: 0;
 }
 
-@media (max-width: 800px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .header-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+  }
+  .header-menu a {
+    padding: 10px 20px;
+    display: block;
+  }
+  .header-menu a:last-child {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 5px;
+  }
+
+  .logo {
+    font-size: 2.8rem;
+  }
+
+  .header-menu {
+    width: 100%;
+  }
+
+  .header-menu a {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+
+  .lang-menu .selected-lang {
+    width: 100%;
+    text-align: center;
+  }
+
+  .lang-menu ul li a {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .lang-menu ul {
+    top: 70px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@media only screen and (max-width: 425px) {
   .header {
     flex-direction: column;
-    padding: 20px 20px;
-    gap: 40px;
+    align-items: flex-start;
   }
-
-  @media (max-width: 540px) {
-    .logo {
-      width: 200px;
-    }
+  .header-menu {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
   }
-
-  @media (max-width: 350px) {
-    .logo {
-      width: 200px;
-    }
+  .header-menu a {
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
   }
 }
