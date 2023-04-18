@@ -22,12 +22,12 @@
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.5;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   margin-bottom: 30px;
 }
 
 .footer-contato a {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   cursor: pointer;
 }

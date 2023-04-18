@@ -23,6 +23,7 @@ body {
   word-break: break-all;
   max-width: 5ch;
   font-weight: 900;
+  font-variant: small-caps;
 }
 
 @media (max-width: 800px) {

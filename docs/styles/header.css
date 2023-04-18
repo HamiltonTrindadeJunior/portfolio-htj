@@ -5,6 +5,7 @@
   align-items: center;
   padding: 40px 20px;
   margin: 0 auto;
+  background-color: rgb(248, 248, 248);
 }
 
 .logo {
@@ -17,7 +18,7 @@
   font-variant: small-caps;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.438);
   border-radius: 5px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .header-menu {
@@ -41,6 +42,121 @@
   border-radius: 20px;
 }
 
+.lang-menu {
+  max-width: 1200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 25px;
+  position: relative;
+}
+
+.lang-menu .selected-lang {
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  margin-top: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.lang-menu .selected-lang:before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.lang-menu .caret {
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.lang-menu ul {
+  margin: 0;
+  padding: 5px;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #f8f8f8;
+  position: absolute;
+  top: 45px;
+  right: 0px;
+  width: 125px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-out;
+  z-index: 1;
+}
+
+.lang-menu ul li {
+  list-style: none;
+  text-align: left;
+}
+
+.lang-menu ul li a {
+  text-decoration: none;
+  width: 125px;
+  padding: 5px 10px;
+  display: block;
+  font-variant: small-caps;
+  font-size: .9rem;
+}
+
+.lang-menu ul li:hover {
+  background-color: #f2f2f2;
+}
+
+.lang-menu ul li a:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.en::before {
+  background-image: url("https://flagsapi.com/US/shiny/32.png");
+}
+
+.br::before {
+  background-image: url("https://flagsapi.com/BR/shiny/32.png");
+}
+
+.lang-menu:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.2s;
+}
+
+.lang-menu ul li:first-child {
+  padding-top: 0;
+}
+.lang-menu ul li:last-child {
+  padding-bottom: 0;
+}
+.lang-menu ul li:not(:first-child):not(:last-child) {
+  padding: 5px 10px;
+  border-top: 1px solid #f8f8f8;
+}
+.lang-menu ul li:hover:not(:first-child):not(:last-child) {
+  background-color: transparent;
+}
+.lang-menu ul li a {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
 @media (max-width: 800px) {
   .header {
     flex-direction: column;
@@ -60,4 +176,3 @@
     }
   }
 }
-
