@@ -1,5 +1,5 @@
 .header {
-  max-width: 1200px;
+  max-width: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,6 +19,7 @@
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.438);
   border-radius: 5px;
   padding: 5px;
+  margin-left: 200px;
 }
 
 .header-menu {
@@ -49,6 +50,7 @@
   align-items: center;
   margin-top: 25px;
   position: relative;
+  margin-right: 20px;
 }
 
 .lang-menu .selected-lang {
@@ -171,6 +173,14 @@
   .header-menu a:last-child {
     margin-top: 10px;
   }
+  .logo {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .lang-menu {
+    margin-top: 60px;
+    margin-right: 5px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -179,7 +189,9 @@
   }
 
   .logo {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
+    margin-left: 5px;
+    margin-top: 10px;
   }
 
   .header-menu {
@@ -189,6 +201,10 @@
   .header-menu a {
     font-size: 0.9rem;
     padding: 5px 10px;
+  }
+
+  .lang-menu{
+    margin-right: 35px;
   }
 
   .lang-menu .selected-lang {
@@ -217,10 +233,41 @@
     margin-top: 20px;
     flex-direction: column;
     align-items: center;
+    margin-left: 5px;
   }
   .header-menu a {
     padding: 10px;
     margin: 5px 0;
     text-align: center;
+  }
+
+  .logo {
+    margin: 5px;
+    text-align: center;
+  }
+
+  .lang-menu{
+    margin-left: 310px;
+    margin-top: -40px;
+  }
+}
+
+@media (max-width: 375px) {
+  .lang-menu{
+    margin-top: -40px;
+    margin-left: 260px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    background-color: white;
+  }
+  .logo {
+    margin-right: 5px;
+  }
+  .lang-menu{
+    margin-top: -40px;
+    margin-left: 210px;
   }
 }
